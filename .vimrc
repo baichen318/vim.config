@@ -1,4 +1,5 @@
 set nu
+set syntax=on
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
