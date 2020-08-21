@@ -1,3 +1,32 @@
+" Vundle setup "
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" basic settings "
 set nu
 set syntax=on
 inoremap ' ''<ESC>i
@@ -5,6 +34,7 @@ inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 "inoremap { {<CR>}<ESC>O
+
 if has("syntax")
 
     syntax on
@@ -16,6 +46,8 @@ set tags+=tags
 autocmd FileType python set tabstop=4 | set expandtab | set autoindent
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 set path=./**
+
+" set the mouse "
 set mouse=a
 set mousehide
 
@@ -27,3 +59,6 @@ highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=N
 
 " ctags jump globally "
 set cscopetag
+
+" set the search mode "
+set incsearch
