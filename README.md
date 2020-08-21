@@ -2,5 +2,7 @@
 My own custom configurations for the Vim editor
 
 ## Usage
-copy .vimrc to your home directory
-
+Execute the BASH script
+```bash
+$ bash setup.sh
+```
