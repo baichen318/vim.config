@@ -10,6 +10,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +44,7 @@ endif
 set autoindent
 set tabstop=4
 set tags+=tags
-autocmd FileType python set tabstop=4 | set expandtab | set autoindent
+autocmd FileType python set tabstop=4 | set expandtab | set autoindent | setlocal et sta sw=4 sts=4
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 set path=./**
 
