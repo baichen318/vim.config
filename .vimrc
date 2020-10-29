@@ -42,10 +42,13 @@ if has("syntax")
 
 endif
 set autoindent
-set tabstop=4
 set tags+=tags
 autocmd FileType python set tabstop=4 | set expandtab | set autoindent | setlocal et sta sw=4 sts=4
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+set tabstop=4
+" au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+if has("autocmd")
+		au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 set path=./**
 
 " set the mouse "
