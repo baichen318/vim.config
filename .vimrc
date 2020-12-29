@@ -68,3 +68,6 @@ set cscopetag
 
 " set the search mode "
 set incsearch
+
+" set the highlight search"
+set hlsearch
