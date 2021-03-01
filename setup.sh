@@ -10,3 +10,5 @@ cd $cur
 mkdir -p ~/.vim/bundle
 cp -rf Vundle.vim ~/.vim/bundle
 cp -rf .vimrc ~
+user=`whoami`
+sudo chown ${user}:${user} ~/.viminfo
