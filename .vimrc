@@ -12,6 +12,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'stephpy/vim-yaml'
+Plugin 'vhda/verilog_systemverilog.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
