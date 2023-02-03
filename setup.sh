@@ -10,5 +10,6 @@ cd $cur
 mkdir -p ~/.vim/bundle
 cp -rf Vundle.vim ~/.vim/bundle
 cp -rf .vimrc ~
+cp -rf .tmux.conf ~
 user=`whoami`
 sudo chown ${user}:${user} ~/.viminfo
